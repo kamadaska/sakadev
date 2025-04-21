@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SakaDevelopment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9f9fb, #eaeaea);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    header h1 span {
+      color: #bb86fc;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .highlight {
+      color: #bb86fc;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #3f3f3f;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #bb86fc;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #333;
+      border-left: 5px solid #bb86fc;
+      padding-left: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    li:hover {
+      transform: scale(1.02);
+    }
+
+    .skill-bar {
+      margin: 15px 0;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .bar {
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(to right, #7f5af0, #bb86fc);
+      border-radius: 10px;
+      transition: width 1.5s ease;
+    }
+
+    footer {
+      background-color: #2d2d2d;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Saka<span>Development</span></h1>
+    <p>Yazılımda <span class="highlight">Güvenilir Ortağınız</span></p>
+  </header>
+
+  <nav>
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#clients">Referanslar</a>
+    <a href="#team">Ekibimiz</a>
+    <a href="#skills">Yeteneklerimiz</a>
+  </nav>
+
+  <section id="about">
+    <h2>Hakkımızda</h2>
+    <p>SakaDevelopment olarak yazılım dünyasında yaratıcı çözümler üretmeyi amaçlayan bir ekibiz. Özellikle oyun geliştirme ve web tabanlı uygulamalar konusunda uzmanız. Amacımız, müşterilerimize kaliteli ve güvenilir hizmet sunmaktır.</p>
+  </section>
+
+  <section id="services">
+    <h2>Hizmetler</h2>
+    <p>Discord botları, oyun sunucu scriptleri, web tabanlı sistemler ve kullanıcı dostu paneller geliştiriyoruz. Her projede müşteri memnuniyetini ön planda tutuyoruz.</p>
+  </section>
+
+  <section id="clients">
+    <h2>Hizmetimizden Yararlananlar</h2>
+    <ul>
+      <li><strong>Ruffeles Roleplay</strong> – Roleplay sunucusu için özel sistemler geliştirildi.</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <h2>Ekibimiz</h2>
+    <ul>
+      <li><strong>Saka</strong> – Frontend ve UI/UX geliştirici. Web arayüzleri ve kullanıcı deneyimi tasarımlarını üstlenir.</li>
+      <li><strong>Pingman</strong> – Backend geliştirici. Discord botları ve sunucu sistemleri konusunda uzmandır.</li>
+      <li><strong>Droyers</strong> – Full-stack geliştirici. Hem oyun içi hem de web projelerinde yer alır.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>HTML, CSS & JS Bilgi Düzeyimiz</h2>
+
+    <div class="skill-bar">
+      <div class="skill-label">HTML – %90</div>
+      <div class="bar"><div class="bar-fill" data-percent="90%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label">CSS – %85</div>
+      <div class="bar"><div class="bar-fill" data-percent="85%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-label">JavaScript – %70</div>
+      <div class="bar"><div class="bar-fill" data-percent="70%"></div></div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 SakaDevelopment | Tüm Hakları Saklıdır
+  </footer>
+
+  <script>
+    // Scroll ile giriş animasyonu
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Skill bar animasyonu
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.bar-fill').forEach(bar => {
+        const percent = bar.getAttribute('data-percent');
+        const barTop = bar.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (barTop < windowHeight - 50) {
+          bar.style.width = percent;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
